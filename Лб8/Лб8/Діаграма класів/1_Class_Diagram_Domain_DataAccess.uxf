@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>20</x>
+      <y>20</y>
+      <w>1100</w>
+      <h>440</h>
+    </coordinates>
+    <panel_attributes>«layer»
+Domain
+--
+bg=#f5f3ff</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>460</x>
+      <y>60</y>
+      <w>190</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>«interface»
+IEntity
+--
++ Id : int</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>890</x>
+      <y>60</y>
+      <w>190</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>«enumeration»
+UserRole
+--
+Admin
+Teacher</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>230</y>
+      <w>185</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Address
+--
++ Id : int
++ City : string
++ Street : string
++ Building : string
+--
++ ToString() : string</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>255</x>
+      <y>230</y>
+      <w>175</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Group
+--
++ Id : int
++ Name : string
+--
++ ToString() : string</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>460</x>
+      <y>230</y>
+      <w>200</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Student
+--
++ Id : int
++ FirstName : string
++ LastName : string
++ Age : int
++ GroupId : int
++ AddressId : int
+--
++ ToString() : string</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>690</x>
+      <y>230</y>
+      <w>195</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>GroupSubject
+--
++ Id : int
++ GroupId : int
++ SubjectId : int
+--
++ ToString() : string</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>915</x>
+      <y>230</y>
+      <w>185</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Subject
+--
++ Id : int
++ Name : string
++ Hours : int
+--
++ ToString() : string</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>140</y>
+      <w>360</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10;90;10;40;340;40;340;10</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>140</y>
+      <w>180</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10;90;10;50;160;50;160;10</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>545</x>
+      <y>140</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10;90;10;10</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>580</x>
+      <y>140</y>
+      <w>220</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>200;90;200;50;10;50;10;10</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>610</x>
+      <y>140</y>
+      <w>410</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>390;90;390;40;10;40;10;10</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>280</y>
+      <w>60</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*</panel_attributes>
+    <additional_attributes>10;20;40;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>370</y>
+      <w>360</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*</panel_attributes>
+    <additional_attributes>10;10;10;35;340;35;340;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>340</x>
+      <y>350</y>
+      <w>460</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*</panel_attributes>
+    <additional_attributes>10;10;10;75;440;75;440;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>875</x>
+      <y>280</y>
+      <w>60</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1</panel_attributes>
+    <additional_attributes>10;20;40;20</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>20</x>
+      <y>480</y>
+      <w>1100</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>«layer»
+DataAccess
+--
+bg=#fdf8ee</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>530</y>
+      <w>320</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>DB
+--
++ Students : DBItem&lt;Student&gt;
++ Addresses : DBItem&lt;Address&gt;
++ Groups : DBItem&lt;Group&gt;
++ Subjects : DBItem&lt;Subject&gt;
++ GroupSubjects : DBItem&lt;GroupSubject&gt;
+- _config : Configuration
+--
++ DB(config : Configuration)
++ SaveAll() : void
++ LoadAll() : void</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>460</x>
+      <y>520</y>
+      <w>280</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>template=T:IEntity
+DBItem
+--
+- _items : List&lt;T&gt;
+- _filePath : string
+--
++ DBItem(filePath : string)
++ Add(item : T) : void
++ GetById(id : int) : T
++ Update(item : T) : bool
++ Delete(id : int) : bool
++ GetAll() : List&lt;T&gt;
++ Save() : void
++ Load() : void</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>830</x>
+      <y>530</y>
+      <w>260</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Configuration
+--
++ DataFolder : string
++ BackupEnabled : bool
+--
++ Configuration()
++ LoadSettings(path : string) : void</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>630</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=5</panel_attributes>
+    <additional_attributes>10;20;100;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>720</y>
+      <w>590</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10;60;10;75;570;75;570;10</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>545</x>
+      <y>140</y>
+      <w>65</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;</panel_attributes>
+    <additional_attributes>25;380;25;290;10;290;10;10</additional_attributes>
+  </element>
+</diagram>

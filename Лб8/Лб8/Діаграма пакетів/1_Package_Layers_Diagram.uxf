@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umletino" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>360</x>
+      <y>25</y>
+      <w>280</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;entry point&gt;&gt;
+Pr1_1609
+--
++ Program
+bg=#eef2f7</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>270</x>
+      <y>185</y>
+      <w>460</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;layer&gt;&gt;
+Presentation
+--
++ Main (Main_Menu)
++ HR (HR_Menu, CRUD &amp; Services Menus)
++ Department (Department_Menu, CRUD &amp; Services Menus)
+bg=#e8f4fd</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>270</x>
+      <y>390</y>
+      <w>460</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;layer&gt;&gt;
+BusinessLogic
+--
++ CRUD (HR_CRUD_*, Department_CRUD_*)
++ Services (DepartmentServyses, HR/Dept Services)
++ Validation (Validator)
++ Navigation (StateMachine, MenuState)
+bg=#eafaf1</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>270</x>
+      <y>615</y>
+      <w>460</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;layer&gt;&gt;
+DataAccess
+--
++ DB
++ DBItem&lt;T&gt;
++ Configuration
+bg=#fef9e7</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>140</x>
+      <y>825</y>
+      <w>340</w>
+      <h>155</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;layer&gt;&gt;
+Domain
+--
++ IEntity, UserRole
++ Student, Address, Group
++ Subject, GroupSubject
+bg=#f5eef8</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>520</x>
+      <y>825</y>
+      <w>340</w>
+      <h>155</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;utility&gt;&gt;
+Infrastructure
+--
++ InputHelper
++ Logger
+bg=#f4f6f6</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>135</y>
+      <w>110</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>10;10;10;50</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>335</y>
+      <w>110</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>10;10;10;55</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>560</y>
+      <w>110</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>10;10;10;55</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>765</y>
+      <w>130</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>90;10;10;60</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>70</x>
+      <y>260</y>
+      <w>210</w>
+      <h>660</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>200;10;10;10;10;640;70;640</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>70</x>
+      <y>465</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=.
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>200;20;10;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>80</y>
+      <w>300</w>
+      <h>840</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>10;10;280;10;280;820;220;820</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>730</x>
+      <y>250</y>
+      <w>200</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=.
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>10;20;190;20</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>730</x>
+      <y>460</y>
+      <w>200</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=.
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>10;20;190;20</additional_attributes>
+  </element>
+</diagram>

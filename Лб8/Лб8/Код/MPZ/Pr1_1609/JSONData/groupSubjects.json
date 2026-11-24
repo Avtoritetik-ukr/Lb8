@@ -1,0 +1,22 @@
+[
+  {
+    "Id": 1,
+    "GroupId": 1,
+    "SubjectID": 2
+  },
+  {
+    "Id": 2,
+    "GroupId": 1,
+    "SubjectID": 3
+  },
+  {
+    "Id": 3,
+    "GroupId": 2,
+    "SubjectID": 1
+  },
+  {
+    "Id": 4,
+    "GroupId": 2,
+    "SubjectID": 2
+  }
+]

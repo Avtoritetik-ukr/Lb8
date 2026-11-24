@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>20</x>
+      <y>20</y>
+      <w>1520</w>
+      <h>530</h>
+    </coordinates>
+    <panel_attributes>«layer»
+Presentation
+--
+bg=#f0f7ff</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>625</x>
+      <y>55</y>
+      <w>310</w>
+      <h>115</h>
+    </coordinates>
+    <panel_attributes>«abstract»
+/MenuBase/
+--
++ /ShowMenu() : void/
++ /HandleMenu() : void/
+bg=#ffffff</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>45</x>
+      <y>245</y>
+      <w>310</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Main_Menu {leaf}
+--
+- stateMachine : StateMachine
+- departmentServices : DepartmentServyses
+- hr_Menu : HR_Menu
+- department_Menu : Department_Menu
+--
++ ShowMenu() : void
++ HandleMenu() : void
+_+ SelectRole() : UserRole_
+bg=#ffffff</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>375</x>
+      <y>245</y>
+      <w>275</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>HR_Menu {leaf}
+--
+- stateMachine : StateMachine
+- hr_CRUD_Menu : HR_CRUD_Menu
+- hr_Services_Menu : HR_Services_Menu
+--
++ ShowMenu() : void
++ HandleMenu() : void
+bg=#ffffff</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>670</x>
+      <y>245</y>
+      <w>260</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Department_Menu {leaf}
+--
+- stateMachine : StateMachine
+- department_CRUD_Menu
+- department_Services_Menu
+--
++ ShowMenu() : void
++ HandleMenu() : void
+bg=#ffffff</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>950</x>
+      <y>245</y>
+      <w>275</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Student_CRUD_Menu {leaf}
+--
+- hr_CRUD_Student : HR_CRUD_Student
+--
++ ShowMenu() : void
++ HandleMenu() : void
+bg=#ffffff</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1245</x>
+      <y>245</y>
+      <w>275</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Subject_CRUD_Menu {leaf}
+--
+- department_CRUD_Subject
+--
++ ShowMenu() : void
++ HandleMenu() : void
+bg=#ffffff</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>190</x>
+      <y>160</y>
+      <w>590</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>570.0;10.0;570.0;45.0;10.0;45.0;10.0;85.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>505</x>
+      <y>160</y>
+      <w>275</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>255.0;10.0;255.0;45.0;10.0;45.0;10.0;85.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>770</x>
+      <y>160</y>
+      <w>30</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;85.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>770</x>
+      <y>160</y>
+      <w>330</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;45.0;310.0;45.0;310.0;85.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>770</x>
+      <y>160</y>
+      <w>625</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;45.0;605.0;45.0;605.0;85.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>45</x>
+      <y>450</y>
+      <w>1475</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>Усі інші 11 меню проєкту (HR_CRUD_Menu, Address_CRUD_Menu, Group_CRUD_Menu, HR_Services_Menu, HR_Student_Services_Menu, HR_StudentAddress_Services_Menu,
+Department_CRUD_Menu, GroupSubject_CRUD_Menu, Department_Services_Menu, Department_Student_Services_Menu, Department_StudentAddress_Services_Menu)
+аналогічно наслідують абстрактний клас MenuBase та оголошені як sealed ({leaf}).
+bg=#ffffff</panel_attributes>
+    <additional_attributes />
+  </element>
+
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>20</x>
+      <y>575</y>
+      <w>960</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>«utility»
+Infrastructure
+--
+bg=#f8fafc</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>45</x>
+      <y>620</y>
+      <w>490</w>
+      <h>145</h>
+    </coordinates>
+    <panel_attributes>InputHelper
+--
+_+ ReadInt(prompt : string, min : int, max : int) : int_
+_+ ReadString(prompt : string, allowEmpty : bool) : string_
+bg=#ffffff</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>620</y>
+      <w>395</w>
+      <h>145</h>
+    </coordinates>
+    <panel_attributes>Logger
+--
+_- logPath : string_
+--
+_+ Init(path : string) : void_
+_+ Write(action : string, message : string) : void_
+bg=#ffffff</panel_attributes>
+    <additional_attributes />
+  </element>
+
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1010</x>
+      <y>575</y>
+      <w>530</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>«entry point»
+Pr1_1609
+--
+bg=#f8fafc</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1035</x>
+      <y>620</y>
+      <w>480</w>
+      <h>145</h>
+    </coordinates>
+    <panel_attributes>Program
+--
+_- Main(args : string[]) : void_
+bg=#ffffff</panel_attributes>
+    <additional_attributes />
+  </element>
+</diagram>

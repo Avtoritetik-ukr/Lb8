@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>20</x>
+      <y>20</y>
+      <w>1460</w>
+      <h>860</h>
+    </coordinates>
+    <panel_attributes>«layer»
+BusinessLogic
+--
+bg=#eefaf2</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>40</x>
+      <y>70</y>
+      <w>680</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>Navigation
+--
+bg=#ffffff</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>120</y>
+      <w>360</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>StateMachine {leaf}
+--
+- _currentState : MenuState
+- _currentRole : UserRole
+--
++ CurrentState : MenuState
++ CurrentRole : UserRole
++ StateMachine()
++ TransitionTo(next : MenuState) : void
++ SetRole(role : UserRole) : void
++ CheckAdminGuard(action : string) : bool</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>490</x>
+      <y>110</y>
+      <w>210</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>«enumeration»
+MenuState
+--
+MainMenu
+HRMenu
+HRCRUDMenu
+StudentCRUD
+AddressCRUD
+GroupCRUD
+DepartmentMenu
+SubjectCRUD
+GroupSubjectCRUD
+... (18 states)</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>210</y>
+      <w>90</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10;20;70;20</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>750</x>
+      <y>70</y>
+      <w>710</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>Validation
+--
+bg=#ffffff</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>120</y>
+      <w>590</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>Validator
+--
+_+ ValidateStudent(student : Student, db : DB) : bool_
+_+ ValidateAddress(address : Address) : bool_
+_+ ValidateGroup(group : Group) : bool_
+_+ ValidateSubject(subject : Subject) : bool_
+_+ ValidateGroupSubject(gs : GroupSubject, db : DB) : bool_
+_+ IsValidAge(age : int) : bool_</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>40</x>
+      <y>390</y>
+      <w>920</w>
+      <h>470</h>
+    </coordinates>
+    <panel_attributes>CRUD
+--
+bg=#ffffff</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>430</y>
+      <w>360</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>template=T:IEntity
+«abstract»
+/CrudBase/
+--
+# _db : DB
+# _stateMachine : StateMachine
+--
+# CrudBase(db : DB, sm : StateMachine)
++ {abstract} Create() : void
++ {abstract} Read() : void
++ {abstract} Update() : void
++ {abstract} Delete() : void
++ {abstract} GetAll() : void</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>55</x>
+      <y>710</y>
+      <w>170</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>HR_CRUD_Student
+--
++ Create() : void
++ Read() : void
++ Update() : void
++ Delete() : void
++ GetAll() : void</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>235</x>
+      <y>710</y>
+      <w>170</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>HR_CRUD_Address
+--
++ Create() : void
++ Read() : void
++ Update() : void
++ Delete() : void
++ GetAll() : void</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>415</x>
+      <y>710</y>
+      <w>170</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>HR_CRUD_Group
+--
++ Create() : void
++ Read() : void
++ Update() : void
++ Delete() : void
++ GetAll() : void</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>595</x>
+      <y>710</y>
+      <w>170</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Department_CRUD_
+Subject
+--
++ Create() : void
++ Read() : void
++ Update() : void
++ Delete() : void
++ GetAll() : void</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>775</x>
+      <y>710</y>
+      <w>170</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Department_CRUD_
+GroupSubject
+--
++ Create() : void
++ Read() : void
++ Update() : void
++ Delete() : void
++ GetAll() : void</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>130</x>
+      <y>630</y>
+      <w>380</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10;80;10;40;360;40;360;10</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>310</x>
+      <y>630</y>
+      <w>200</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10;80;10;40;180;40;180;10</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>630</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10;80;10;10</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>500</x>
+      <y>630</y>
+      <w>190</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>180;80;180;40;10;40;10;10</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>500</x>
+      <y>630</y>
+      <w>370</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>360;80;360;40;10;40;10;10</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>980</x>
+      <y>390</y>
+      <w>480</w>
+      <h>470</h>
+    </coordinates>
+    <panel_attributes>Services
+--
+bg=#ffffff</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1020</x>
+      <y>430</y>
+      <w>400</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>DepartmentServyses
+--
+- _db : DB
+--
++ DepartmentServyses(db : DB)
++ GetStudentBySurname(surname : string) : void
++ GetStudentWorkload(studentId : int) : void
++ GetStudentsByAddress(addressId : int) : void
++ GetGroupSubjects(groupId : int) : void</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1000</x>
+      <y>670</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>HR_Student_Services
+--
+- _service : DepartmentServyses
+--
++ Execute() : void</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1230</x>
+      <y>670</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>HR_StudentAddress_
+Services
+--
+- _service : DepartmentServyses
+--
++ Execute() : void</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1000</x>
+      <y>770</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Department_Student_
+Services
+--
+- _service : DepartmentServyses
+--
++ Execute() : void</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1230</x>
+      <y>770</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Department_StudentAddress_
+Services
+--
+- _service : DepartmentServyses
+--
++ Execute() : void</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1095</x>
+      <y>600</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10;70;10;10</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1325</x>
+      <y>600</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10;70;10;10</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>985</x>
+      <y>600</y>
+      <w>45</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>15;210;5;210;5;40;35;40;35;10</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1410</x>
+      <y>600</y>
+      <w>45</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>30;210;40;210;40;40;10;40;10;10</additional_attributes>
+  </element>
+</diagram>

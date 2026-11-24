@@ -1,0 +1,17 @@
+[
+  {
+    "Id": 1,
+    "StudentAdrress": "Київ",
+    "StudentId": 3
+  },
+  {
+    "Id": 2,
+    "StudentAdrress": "Черкаси",
+    "StudentId": 1
+  },
+  {
+    "Id": 3,
+    "StudentAdrress": "Полтава",
+    "StudentId": 2
+  }
+]
